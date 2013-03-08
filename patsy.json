@@ -20,7 +20,6 @@
   },
   "build": {
     "js": "js/src/",
-    "jsfiles": ["js/lib/handlebars.js", "js/src/templates.js", "js/src/main.js"],
     "min": {
       "dest": "js/min/output.min.js"
     },

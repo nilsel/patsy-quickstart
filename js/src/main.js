@@ -1,22 +1,19 @@
 
-
-//(function(tmpl, $, Handlebars){
+(function(){
 
   var main = function(){
-    console.log(tmpl.main);
 
     var template = Handlebars.compile(tmpl.main);
     var context = {'text': 'Hello from javascript'};
     var html    = template(context);
-    console.log(html);
 
-    $('#viewport').html(html);
+    $('#viewport').append(html);
 
   };
 
 
-$(document).ready(function(){
-  main();
-});
+  $(document).ready(function(){
+    main();
+  });
 
-//})(tmpl, jQuery, Handlebars);
+})();
