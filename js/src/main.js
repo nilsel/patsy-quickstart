@@ -7,7 +7,7 @@
     var context = {'text': 'Hello from javascript'};
     var html    = template(context);
 
-    $('#viewport').append(html);
+    $('#viewport').html(html);
 
   };
 
