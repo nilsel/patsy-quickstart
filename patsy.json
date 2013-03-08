@@ -1,0 +1,81 @@
+{
+  "project": {
+    "details": {
+      "name": "patsy-boilerplate",
+      "homepage": "",
+      "author": ""
+    },
+    "environment": {
+      "root": "patsy-boilerplate",
+      "abs_path": "/Users/nils/Sites/lab/patsy-boilerplate/",
+      "web_root": "",
+      "port": 8081,
+      "host": "localhost",
+      "home_file": "index.*"
+    },
+    "options": {
+      "watch_config": true,
+      "reload": true
+    }
+  },
+  "build": {
+    "js": "js/src/",
+    "jsfiles": ["js/lib/handlebars.js", "js/src/templates.js", "js/src/main.js"],
+    "min": {
+      "dest": "js/min/output.min.js"
+    },
+    "dist": "js/dist/",
+    "tmpl": {
+      "src": "js/mustache/",
+      "options": {
+        "prefix": "var tmpl = ",
+        "postfix": ";"
+      }
+    },
+    "lint": {},
+    "docs": {
+      "src": "js/src/main.js",
+      "dest": "js/docs/"
+    },
+    "css": {
+      "src": [
+        "css/src/**/*.css",
+        "css/src/*.less"
+      ],
+      "dest": "css/dist/style.css"
+    },
+    "test": {
+      "suites": {
+        "nodeunit": {
+          "src": "js/test/nodeunit/**/*.js"
+        }
+      }
+    },
+    "options": {
+      "watch": true,
+      "verbose": true,
+      "testsOnWatch": false,
+      "linting": true,
+      "force": true
+    }
+  },
+  "proxy": {
+    "resources": [],
+    "options": {
+      "verbose": true,
+      "port": 8080
+    }
+  },
+  "fileserver": {
+    "host": "localhost",
+    "port": 8081,
+    "options": {
+      "verbose": false
+    }
+  },
+  "options": {
+    "verbose": true,
+    "logToFile": false,
+    "scripture": true
+  }
+}
