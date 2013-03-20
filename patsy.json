@@ -20,7 +20,8 @@
   },
   "build": {
     "js": "js/src/",
-    "jsfiles": ["js/src/templates.js", "js/lib/handlebars.js", "js/lib/bootstrap.min.js", "js/src/main.js"],
+    "jslibs": "js/libs/",
+    "jsfiles": "js/src/",
     "min": {
       "dest": "js/min/output.min.js"
     },
@@ -34,12 +35,12 @@
     },
     "lint": {},
     "docs": {
-      "src": "js/src/main.js",
+      "src": "js/src/",
       "dest": "js/docs/"
     },
     "css": {
       "src": [
-        "css/src/**/*.css",
+        "css/lib/*.css",
         "css/src/*.less"
       ],
       "dest": "css/dist/style.css"
@@ -62,7 +63,7 @@
   "proxy": {
     "resources": [],
     "options": {
-      "verbose": true,
+      "verbose": false,
       "port": 8080
     }
   },
