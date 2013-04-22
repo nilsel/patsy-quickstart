@@ -1,13 +1,13 @@
 {
   "project": {
     "details": {
-      "name": "patsy-boilerplate",
+      "name": "patsy-quickstart",
       "homepage": "",
       "author": ""
     },
     "environment": {
-      "root": "patsy-boilerplate",
-      "abs_path": "/Users/nils/Sites/lab/patsy-boilerplate/",
+      "root": "patsy-quickstart",
+      "abs_path": "/Users/nils/Sites/lab/patsy-quickstart/",
       "web_root": "",
       "port": 8081,
       "host": "localhost",
@@ -34,7 +34,9 @@
     "lint": {
       "src": "js/src/*.js"
     },
-    "docs": {},
+    "docs": {
+      "dest": "js/docs/"
+      },
     "css": {
       "src": [
         "css/lib/*.css",
