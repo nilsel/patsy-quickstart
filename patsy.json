@@ -1,39 +1,43 @@
 {
   "project": {
     "details": {
-      "name": "patsy-quickstart",
-      "homepage": "localhost",
-      "author": "Nils P. Ellingsen - nils@deviant.no"
+      "name": "patsy-boilerplate",
+      "homepage": "",
+      "author": ""
     },
     "environment": {
-      "root": "patsy-quickstart",
-      "abs_path": "/Users/nils/Sites/work/patsy-quickstart/",
+      "root": "patsy-boilerplate",
+      "abs_path": "/Users/nils/Sites/lab/patsy-boilerplate/",
       "web_root": "",
       "port": 8081,
       "host": "localhost",
       "home_file": "index.*"
     },
     "options": {
-      "watch_config": false,
-      "reload": false
+      "watch_config": true,
+      "reload": true
     }
   },
   "build": {
-    "js": "js/src/",
+    "js": "js/src/**/*",
     "min": {
-      "dest": "js/min/output.min.js"
+      "dest": "not.written.to.disk"
     },
     "dist": "js/dist/",
     "tmpl": {
-      "src": "js/mustache/"
+      "src": "js/mustache/",
+      "options": {
+        "prefix": "var tmpl = ",
+        "postfix": ";"
+      }
     },
-    "lint": {},
-    "docs": {
-      "dest": "js/docs/"
+    "lint": {
+      "src": "js/src/*.js"
     },
+    "docs": {},
     "css": {
       "src": [
-        "css/src/**/*.css",
+        "css/lib/*.css",
         "css/src/*.less"
       ],
       "dest": "css/dist/style.css"
@@ -56,7 +60,7 @@
   "proxy": {
     "resources": [],
     "options": {
-      "verbose": true,
+      "verbose": false,
       "port": 8080
     }
   },
@@ -68,7 +72,7 @@
     }
   },
   "options": {
-    "verbose": true,
+    "verbose": false,
     "logToFile": false,
     "scripture": true
   }
