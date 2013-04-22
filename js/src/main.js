@@ -1,5 +1,5 @@
 
-(function(){
+(function($){
 
   var main = function(){
 
@@ -16,4 +16,4 @@
     main();
   });
 
-})();
+})(jQuery);
