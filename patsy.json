@@ -19,7 +19,7 @@
     }
   },
   "build": {
-    "js": "js/src/**/*",
+    "js": "js/src/",
     "min": {
       "dest": "not.written.to.disk"
     },
