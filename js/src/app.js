@@ -3,8 +3,8 @@
 
   var main = function(){
 
-    var template = Handlebars.compile(tmpl.main);
-    var context = {'text': 'Hello from javascript'};
+    var template = Handlebars.compile($.tmpl.main);
+    var context = {'text': 'Hello from handlebars+javascript'};
     var html    = template(context);
 
     $('#viewport').html(html);
