@@ -1,17 +1,41 @@
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+ *                  Twitter bootstrap                      *
+ * Note: to save some bytes, cherry-pick components needed *
+ * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
 
-/* LESS compiling not working atm */
+@import "../../components/bootstrap/less/bootstrap.less";
+@import "../../components/bootstrap/less/responsive.less";
+
+
+/*****************
+ * Custom styles *
+ *****************/
+
+ @semiTransparent: rgba(255,255,255,0.75);
+ @blue: #0088F3;
+
 
 html {
   height: 100%;
 }
 
 body {
-  background-color: red;
-  #gradient > .vertical(#148dd2, #27a1e4);
+  padding: 2em;
+  #gradient > .vertical-three-colors(lighten(@blue, 35), @blue , 65%, darken(@blue, 30));
 }
 
-.main {
-  background-color: #f0f;
-  .border-radius(10px);
 
+#viewport {
+  background-color: @semiTransparent;
+  padding: 1em;
+  .border-radius(.4em);
+
+  .hero-unit {
+    h1 {
+      margin: .1em 0;
+      color: lighten(@blue, 45);
+      text-shadow: .02em .02em .15em darken(@blue, 25),
+                   .02em -.01em .05em rgba(0,0,0,0.9);
+    }
+  }
 }

@@ -1,17 +1,23 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Patsy Boilerplate</title>
+    <title>Patsy Quickstart</title>
     <link rel="stylesheet" type="text/css" href="css/dist/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script type="text/javascript" src="components/jquery/jquery.min.js"></script>
     <script type="text/javascript" src="js/lib/handlebars.js"></script>
-    <script type="text/javascript" src="js/dist/patsy-boilerplate.core.js"></script>
+    <script type="text/javascript" src="js/dist/patsy-quickstart.core.js"></script>
   </head>
 
 
-    <div id="viewport"></div>
-
+    <div class="container-fluid">
+      <div class="row-fluid">
+        <div class="span12" id="viewport">
+          <!-- Body content read from main.mustache -->
+        </div>
+      </div>
+    </div>
 
     <script>__reloadServerUrl="ws://localhost:8001";</script>
     <script src="//localhost:8001/__reload/client.js"></script>
