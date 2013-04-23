@@ -21,14 +21,20 @@
   "build": {
     "js": "js/src/",
     "min": {
-      "dest": "not.written.to.disk"
+      "dest": "js/min/output.min.js",
+      "options" : {
+        "beautify": {
+          "width": 80,
+          "beautify": true
+        }
+      }
     },
     "dist": "js/dist/",
     "tmpl": {
       "src": "js/mustache/",
       "options": {
-        "prefix": "var tmpl = ",
-        "postfix": ";"
+        "prefix": "(function($){ $.extend({'tmpl': ",
+        "postfix": "}); })(jQuery);"
       }
     },
     "lint": {
@@ -36,11 +42,11 @@
     },
     "docs": {
       "dest": "js/docs/"
-      },
+    },
     "css": {
       "src": [
-        "css/lib/*.css",
-        "css/src/*.less"
+        "css/src/*.less",
+        "css/src/*.css"
       ],
       "dest": "css/dist/style.css"
     },
