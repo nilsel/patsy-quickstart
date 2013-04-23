@@ -1,5 +1,5 @@
 .DS_Store
-
-js/dist/patsy-quickstart.core.js
-
+js/dist
 templates.js
+components
+css/dist/style.css
