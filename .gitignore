@@ -1,5 +1,2 @@
 .DS_Store
-js/dist
-templates.js
 components
-css/dist/style.css
