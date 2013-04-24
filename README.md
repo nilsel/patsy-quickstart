@@ -8,10 +8,11 @@ Requirements:
 
 **Quickstart:**
 - `npm install -g patsy` if you haven't done that already
-- `git clone https://github.com/nilsel/patsy-quickstart.git`
+- `git clone git@github.com:nilsel/patsy-quickstart.git`
 - `cd patsy-quickstart`
 - `bower install bootstrap` creates "components" folder in project root, jQuery is included
-- `patsy`
+- edit `patsy.json`, update the abs_path to match your setup
+- run `patsy`
 - Point your browser to [http://localhost:8080/](http://localhost:8080/)
 
 ## TODO:
