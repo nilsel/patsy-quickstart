@@ -1,1 +1,1 @@
-(function($){ $.extend({'tmpl': {"main" : '<div class="hero-unit"><h1>Patsy Quickstart</h1><p>{{text}}</p></div>', "done": "true"}}); })(jQuery);
+(function($){ $.extend({'tmpl': {"main" : '<div class="hero-unit"><h1>Patsy Quickstart</h1><p>{{text}}</p></div>',"tweets" : '{{#each tweet}}<blockquote><img class="img-polaroid pull-left" style="margin-right: .9em;" src="{{profile_image_url}}" /><p>{{text}}</p><small>{{from_user}}</small></blockquote>{{/each}}', "done": "true"}}); })(jQuery);

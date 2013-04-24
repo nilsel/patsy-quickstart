@@ -17,5 +17,5 @@ Requirements:
 
 ## TODO:
 - Make JS documentation-generation work
-- Add proxy-config example
+- Fix proxy-config (currently uses static data)
 - More examples (dev vs production configuration), even better documentation ;)

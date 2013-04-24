@@ -8990,15 +8990,12 @@ a.badge:focus {
   }
 }
 
-/*****************
- * Custom styles *
- *****************/
-
-html {
-  height: 100%;
-}
+/***************
+ * Main styles *
+ ***************/
 
 body {
+  height: 100%;
   padding: 2em;
   background-color: #0077d4;
   background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#a6d8ff), color-stop(65%, #0088f3), to(#00325a));
@@ -9022,4 +9019,21 @@ body {
   margin: .1em 0;
   color: #daeeff;
   text-shadow: 0.02em 0.02em 0.15em #004173, 0.02em -0.01em 0.05em rgba(0, 0, 0, 0.9);
+}
+
+#tweets {
+  padding: 1em;
+  background-color: rgba(255, 255, 255, 0.75);
+  -webkit-border-radius: 0.4em;
+     -moz-border-radius: 0.4em;
+          border-radius: 0.4em;
+}
+
+/******************
+ * Customizations *
+ ******************/
+
+blockquote {
+  padding-bottom: 1em;
+  border-left: none;
 }

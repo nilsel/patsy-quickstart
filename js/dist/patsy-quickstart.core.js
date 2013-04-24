@@ -5,20 +5,36 @@
  * @date 2013-04-24
  * @link https://github.com/phun-ky/patsy
  */
-(function(t) {
-    var e = function() {
-        var e = Handlebars.compile(t.tmpl.main), n = {
+(function(e) {
+    var t = function() {
+        var t = Handlebars.compile(e.tmpl.main), a = {
             text: "Hello from handlebars+javascript"
-        }, a = e(n);
-        t("#viewport").html(a);
+        }, s = t(a);
+        e("#viewport").prepend(s);
+    }, a = function(t) {
+        var a = Handlebars.compile(e.tmpl.tweets), s = {
+            tweet: t.results
+        }, r = a(s);
+        e("#tweets").append(r);
+    }, s = function() {
+        e.ajax({
+            url: "/static/testdata.json",
+            data: {
+                q: "from:horse_js"
+            },
+            dataType: "json",
+            type: "get",
+            success: a
+        });
     };
-    t(document).ready(function() {
-        e();
+    e(document).ready(function() {
+        t(), s();
     });
-})(jQuery), function(t) {
-    t.extend({
+})(jQuery), function(e) {
+    e.extend({
         tmpl: {
             main: '<div class="hero-unit"><h1>Patsy Quickstart</h1><p>{{text}}</p></div>',
+            tweets: '{{#each tweet}}<blockquote><img class="img-polaroid pull-left" style="margin-right: .9em;" src="{{profile_image_url}}" /><p>{{text}}</p><small>{{from_user}}</small></blockquote>{{/each}}',
             done: "true"
         }
     });
