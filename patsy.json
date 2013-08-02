@@ -8,6 +8,7 @@
     "environment": {
       "root": "patsy-quickstart",
       "abs_path": "/Users/nils/Sites/lab/patsy-quickstart/",
+      "app_path": "/Users/nils/Sites/lab/patsy-quickstart/",
       "web_root": "",
       "port": 8081,
       "host": "localhost",
