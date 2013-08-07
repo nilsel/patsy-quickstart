@@ -60,7 +60,7 @@
     },
     "options": {
       "watch": true,
-      "verbose": true,
+      "verbose": false,
       "testsOnWatch": false,
       "linting": true,
       "force": true

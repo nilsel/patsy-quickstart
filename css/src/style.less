@@ -12,48 +12,101 @@
  ***************/
 
  @semiTransparent: rgba(255,255,255,0.75);
- @blue: #0088F3;
-
+ @baseBg: #485256;
+ @animDuration: 30s;
 
 html {
+  height: 100%;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-  padding: 2em;
-  #gradient > .vertical-three-colors(lighten(@blue, 35), @blue , 65%, darken(@blue, 30));
+  padding: 0em;
+  #gradient > .vertical-three-colors(lighten(@baseBg, 25), @baseBg , 63%, darken(@baseBg, 25));
   height: 100%;
+  overflow: hidden;
 }
 
 
-#viewport {
-  background-color: @semiTransparent;
-  padding: 1em;
-  .border-radius(.4em);
+@-webkit-keyframes moveit {
+  0% {
+    animation-timing-function: ease-in-out;
+    // left: 0;
+  }
+  30%{
+    height: 190px;
+    // -webkit-transform: scale(2.75);
+  }
+  40% {
+    height: 280px;
+    -webkit-transform: scale(2.75);
+    top: 50px;
+  }
+  70%{
+    top: 120px;
+    -webkit-transform: scale(2.4);
+    animation-timing-function: ease-in;
 
-  .hero-unit {
-    h1 {
-      margin: .1em 0;
-      color: lighten(@blue, 45);
-      text-shadow: .02em .02em .15em darken(@blue, 25),
-                   .02em -.01em .05em rgba(0,0,0,0.9);
-    }
+  }
+  75% {
+    height: 190px;
+    top: 150px;
+    left: -9100px;
+    animation-timing-function: ease-out;
+    // -webkit-transform: scale(1.4);
+    -webkit-transform: rotate3d(.4, .4, 0, 8deg);
+
   }
 }
 
-#tweets {
-  background-color: @semiTransparent;
-  padding: 1em;
-  .border-radius(.4em);
+#viewport {
 
-}
+  -webkit-perspective: 200;
+  //-webkit-transform-origin: 100% 100%;
 
-/******************
- * Customizations *
- ******************/
+  h1 {
+    font-size: 180px;
+    line-height: 0.9;
+    text-transform: uppercase;
+    font-weight: bold;
+    position: relative;
+    width: 15000px;
+    height: 190px;
 
-blockquote {
-  // disable white left-border on blockquotes
-  border-left: none;
-  // moar padding
-  padding-bottom: 1em;
+
+    &.real{
+
+      // color: #fff;
+      top: 100px;
+      left: 500px;
+
+      -webkit-animation: moveit @animDuration 5 alternate;
+      -webkit-transform-origin: top;
+
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background: -webkit-linear-gradient(top, #ff003b 0, #ff6200 100% );
+    }
+    &.ghost{
+      color: rgba(40,40,40,0.25);
+      top: 122px;
+
+      overflow: hidden;
+
+      // -webkit-background-clip: text;
+      //background: -webkit-linear-gradient(top, #221217 0, #000000 100% );
+      // -webkit-text-fill-color: transparent;
+
+      -webkit-animation: moveit @animDuration 5 alternate;
+
+     // -webkit-transform-origin: 50%;
+      // -webkit-transform: skewX(30deg);
+
+      -webkit-transform: rotate3d(1, 0, 0, -120deg);
+      //-webkit-transform: translateY(75%);
+      //-webkit-transform: scaleZ(5);
+    }
+
+  }
 }
